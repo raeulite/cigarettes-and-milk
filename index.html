@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/ico" href="muffin.ico">
+    
+    <title>໒꒰ྀི๑• ༝ •๑꒱ྀི১</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        body {
+            background-color: #fff8fc;
+            background-image: url("meow.jpe");
+            background-repeat: repeat;
+            background-size: 400px;
+
+            font-family: "Darumadrop One", cursive;
+            color: #87756f;
+            text-align: center;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .darumadrop-one-regular {
+          font-family: "Darumadrop One", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER (WITH DESIGN BG)
+        ========================= */
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+
+            background-image: url('card-bg.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.60); 
+            
+            padding: 35px 25px;
+            border-radius: 24px;
+            border: 5px dotted #fcbdd6;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+
+        /* =========================
+           PROFILE (LAYOUT UPDATED)
+        ========================= */
+
+        .profile {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 130px;
+            margin: 0;
+            border-radius: 3%;
+            overflow: hidden;
+            background: none;
+            border: none;
+            flex-shrink: 0;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 6px;
+        }
+
+        .bio {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .star-border {
+            margin-top: 15px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        /* =========================
+           LACES MEOW
+        ========================= */
+        
+        .lace-top {
+            background: url('pixelLace1.png') repeat-x top center;
+            height: 80px;
+            background-size: 950px auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            pointer-events: none; 
+            z-index: 9999;
+        }
+
+        .lace-bottom {
+            background: url('pixelLace2.png') repeat-x bottom center;
+            height: 80px;
+            background-size: 950px auto;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            pointer-events: none; 
+            z-index: 9999; 
+
+        }
+
+
+        /* =========================
+           STICKER & IMAGE ALIGNMENT
+        ========================= */
+
+        .category-button img,
+        .sub-links a img,
+        .platform-button img,
+        .discord-title img {
+            display: inline-block;
+            vertical-align: middle;
+            height: 1.2em;
+            width: auto;
+            margin: 0 4px;
+        }
+
+        .link-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+
+        /* =========================
+           CATEGORIES
+        ========================= */
+
+        .categories {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+
+        /* =========================
+           BIG CATEGORY BUTTON
+        ========================= */
+
+        .category-button {
+            width: 100%;
+            min-height: 60px;
+            padding: 15px;
+            border: 2px dashed #f794b5;
+            border-radius: 12px;
+            background-color: #ffffff;
+            
+            font-family: "Darumadrop One", cursive;
+            color: #87756f;
+            font-size: 16px;
+            
+            cursor: pointer;
+            transition: all 0.25s ease;
+            
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+        }
+
+        .category-button:hover {
+            transform: scale(1.02);
+            background-color: #ffbdcc;
+        }
+
+        .category-button.active-btn {
+            background-color: #fff0f5;
+            box-shadow: inset 0 0 0 2px #ffb6c1;
+        }
+
+
+        /* =========================
+           SUB LINKS CONTAINER >:####
+        ========================= */
+
+        .sub-links {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            padding: 4px 0;
+            overflow: hidden;
+        }
+
+        .sub-links.open {
+            display: flex;
+            animation: menuOpen 0.35s ease forwards;
+        }
+
+        .sub-links.closing {
+            display: flex;
+            animation: menuClose 0.35s ease forwards;
+        }
+
+        @keyframes menuOpen {
+            0% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes menuClose {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+        }
+
+
+        /* =========================
+           normal small links
+        ========================= */
+
+        .sub-links > a,
+        .text-link {
+            width: 100%;
+            min-height: 55px;
+            padding: 12px 15px;
+            background-color: #ffe6ed;
+            border-radius: 9px;
+            border: 2px dotted #fcacc7;
+            text-decoration: none;
+            color: #87756f;
+            
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .sub-links > a small,
+        .text-link small {
+            opacity: 0.75;
+            font-size: 12px;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        
+        .sub-links > a:hover,
+        .text-link:hover {
+            transform: scale(1.02);
+            background-color: #ffbdcc;
+        }
+
+
+        /* =========================
+           MULTI ACCOUNT ROW
+        ========================= */
+
+        .multi-account {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+        /* =========================
+           platform buttons :3
+        ========================= */
+
+        .platform-button {
+            width: 100%;
+            height: 55px;
+            padding: 15px;
+            border: 2px dotted #fcacc7;
+            border-radius: 9px;
+            background-color: #ffe6ed;
+            
+            font-family: "Darumadrop One", cursive;
+            color: #87756f;
+            font-size: 14px;
+            
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.35s ease;
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .platform-button:hover {
+            transform: scale(1.02);
+            background-color: #ffbdcc;
+        }
+
+
+        /* =========================
+           when clicked platform
+        ========================= */
+
+        .multi-account.active .platform-button {
+            width: 110px;
+            height: 110px;
+            border: 2px dotted #fcacc7;
+            border-radius: 12px;
+            
+            background-color: #fff0f5;
+            box-shadow: inset 0 0 0 2px #ffb6c1;
+        }
+
+
+        /* =========================
+           acc links
+        ========================= */
+
+        .account-links {
+            display: none;
+            flex: 1;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .multi-account.active .account-links {
+            display: flex;
+        }
+
+        .multi-account.active .account-links a {
+            width: 100%;
+            min-height: 51px;
+            padding: 10px 14px;
+            background-color: #efe1fa;
+            border-radius: 9px;
+            border: 2px dotted #fcacc7;
+            
+            text-decoration: none;
+            font-size: 13px;
+            color: #87756f;
+            display: flex;
+            
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            animation: subLinkPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            transition: all 0.2s ease;
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .multi-account.closing .account-links {
+            display: flex;
+        }
+
+        .multi-account.closing .account-links a {
+            animation: subLinkUnpop 0.25s ease forwards;
+        }
+
+        .multi-account.active .account-links a:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .multi-account.active .account-links a:nth-child(2) {
+            animation-delay: 0.12s;
+        }
+
+        @keyframes subLinkPop {
+            0% {
+                opacity: 0;
+                transform: translateX(15px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        @keyframes subLinkUnpop {
+            0% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(15px) scale(0.9);
+            }
+        }
+
+        .account-links a:hover {
+            transform: scale(1.03);
+            background-color: #ffdae9;
+        }
+
+
+        /* =========================
+           Pplaylistz multicontainer basta
+        ========================= */
+
+        .playlist-account {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .playlist-account.active .platform-button {
+            background-color: #fff0f5;
+            box-shadow: inset 0 0 0 2px #ffb6c1;
+        }
+
+        .playlist-links-grid {
+            display: none;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            width: 100%;
+        }
+
+        .playlist-account.active .playlist-links-grid {
+            display: grid;
+        }
+
+        .playlist-account.closing .playlist-links-grid {
+            display: grid;
+        }
+
+        .playlist-account.closing .playlist-links-grid a {
+            animation: subLinkUnpop 0.25s ease forwards;
+        }
+
+        .playlist-links-grid a {
+            min-height: 51px;
+            padding: 10px 14px;
+            background-color: #efe1fa;
+            border-radius: 9px;
+            border: 2px dotted #fcacc7;
+            
+            text-decoration: none;
+            font-size: 13px;
+            color: #87756f;
+            display: flex;
+            
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            animation: subLinkPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            transition: all 0.2s ease;
+        }
+
+        .playlist-links-grid a.full-width {
+            grid-column: span 2;
+        }
+
+        .playlist-links-grid a:nth-child(1) { animation-delay: 0.04s; }
+        .playlist-links-grid a:nth-child(2) { animation-delay: 0.08s; }
+        .playlist-links-grid a:nth-child(3) { animation-delay: 0.12s; }
+        .playlist-links-grid a:nth-child(4) { animation-delay: 0.16s; }
+        .playlist-links-grid a:nth-child(5) { animation-delay: 0.20s; }
+
+        .playlist-links-grid a:hover {
+            transform: scale(1.02);
+            background-color: #ffdae9;
+        }
+
+
+        /* =========================
+           DISCORD & TEXT LINKS
+        ========================= */
+
+        .text-link {
+            line-height: 1.4;
+        }
+
+        .discord-box {
+            width: 100%;
+            padding: 15px 15px 12px;
+            background-color: #efe1fa;
+            border-radius: 9px;
+            border: 2px dotted #fcacc7;
+            color: #87756f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .discord-title {
+            font-size: 20px;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .discord-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.3;
+            font-size: 14px;
+        }
+
+        .discord-item small {
+            opacity: 0.75;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        .discord-divider {
+            width: 80%;
+            height: 1px;
+            border-top: 1px dotted #fcacc7;
+            margin: 2px 0;
+        }
+
+
+        /* =========================
+           EXAMPLE CUSTOM BG CLASSES PER BUTTON
+        ========================= */
+
+        .bg-btn-1 {
+            background-image: url('bg-button1.png');
+        }
+
+        .bg-btn-2 {
+            background-image: url('bg-button2.png');
+        }
+
+
+        /* =========================
+           BOTTOM & FOOTER
+        ========================= */
+
+        .bottom {
+            min-height: 20px;
+            margin-top: 0px;
+        }
+
+        footer {
+            margin-top: 0px;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 500px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 25px 15px;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .profile-info {
+                align-items: center;
+                text-align: center;
+            }
+
+            .avatar {
+                width: 110px;
+                height: 110px;
+            }
+
+            .profile h1 {
+                font-size: 23px;
+                justify-content: center;
+            }
+
+            .category-button {
+                min-height: 55px;
+                font-size: 15px;
+            }
+
+            .multi-account.active .platform-button {
+                width: 90px;
+                height: 90px;
+                font-size: 13px;
+            }
+
+            .multi-account {
+                gap: 7px;
+            }
+
+            .account-links a,
+            .playlist-links-grid a {
+                min-height: 40px;
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+		
+        /* =========================
+           raining gifs meowwwww
+        ========================= */
+		
+		.rain-container {
+			position: fixed;
+			inset: 0;
+			pointer-events: none;
+			overflow: hidden;
+			z-index: 999999; 
+		}
+
+		.rain-drop {
+			position: absolute;
+			width: 90px;  
+			height: auto;
+			top: -80px;
+			animation: fall linear infinite;
+            image-rendering: pixelated;
+		}
+
+		.pixel-spin {
+			animation: fall linear infinite, pixelRotate 2s steps(8) infinite;
+		}
+
+		@keyframes fall {
+			0% { transform: translateY(-100px); opacity: 0; }
+			10% { opacity: 1; }
+			90% { opacity: 1; }
+			100% { transform: translateY(110vh); opacity: 0; }
+		}
+
+		@keyframes pixelRotate {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="rain-container">
+  <img src="starz1.png" class="rain-drop pixel-spin" style="left:5%; animation-duration: 4.5s, 1.8s; animation-delay: 0s, 0s;">
+  <img src="starz2.png" class="rain-drop" style="left:12%; animation-duration: 6s; animation-delay: 2.3s;">
+  <img src="starz3.png" class="rain-drop pixel-spin" style="left:20%; animation-duration: 5.2s, 2.2s; animation-delay: 1.1s, 0s;">
+  <img src="starz1.png" class="rain-drop" style="left:28%; animation-duration: 4.8s; animation-delay: 3.5s;">
+  <img src="starz2.png" class="rain-drop pixel-spin" style="left:35%; animation-duration: 5.8s, 1.5s; animation-delay: 0.5s, 0s;">
+  <img src="starz3.png" class="rain-drop" style="left:44%; animation-duration: 6.2s; animation-delay: 4.1s;">
+  <img src="starz1.png" class="rain-drop pixel-spin" style="left:52%; animation-duration: 5s, 2s; animation-delay: 1.8s, 0s;">
+  <img src="starz2.png" class="rain-drop" style="left:60%; animation-duration: 4.2s; animation-delay: 0.2s;">
+  <img src="starz3.png" class="rain-drop pixel-spin" style="left:68%; animation-duration: 5.5s, 1.6s; animation-delay: 2.9s, 0s;">
+  <img src="starz1.png" class="rain-drop" style="left:76%; animation-duration: 6.5s; animation-delay: 1.4s;">
+  <img src="starz2.png" class="rain-drop pixel-spin" style="left:84%; animation-duration: 4.7s, 2.4s; animation-delay: 3.8s, 0s;">
+  <img src="starz3.png" class="rain-drop pixel-spin" style="left:92%; animation-duration: 5.3s, 1.9s; animation-delay: 0.8s, 0s;">
+</div>
+
+<div class="lace-top"></div>
+<div class="lace-bottom"></div>
+
+    <main class="container">
+
+        <section class="profile">
+            <div class="profile-header">
+                <div class="avatar">
+                    <img src="icon3.gif" alt="My avatar">
+                </div>
+
+                <div class="profile-info">
+                    <h1 style="
+                        background-image: url('polkadot.jpe');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        padding: 5px 8px;
+                        border-radius: 2px;
+                        border: 6px double #ffb6d9;
+                        color: #917f7c;
+                        text-shadow: 0 0 3px white;
+                    ">
+                        <img src="note.webp"> hello im <img src="angel1.webp">rae<img src="angel2.webp">
+                    </h1>
+                    
+                    <p class="bio">
+                        i have nicotine addiction <br>
+                        & these r My links . . . thank (_ _)。゜zｚＺ
+                    </p>
+                </div>
+            </div>
+
+            <div class="star-border">
+                <img src="star.webp"><img src="star.webp">
+            </div>
+        </section>
+
+        <section class="categories">
+        
+            <button class="category-button bg-btn-1" onclick="toggleCategory('main', this)" 
+            style="background-image: url('wallp.jpe');">
+                ଘ꒰⑅ ´ ˘ ` ⑅ ꒱♡
+            </button>
+
+            <div class="sub-links" id="main">
+                <a href="https://raeulite.github.io/hamsterangel/" target="_blank" rel="noopener">
+                    <span class="link-title">hamsterangel ; my personal website <img src="unicorn.webp"></span>
+                    <small>my website only looks good in desktop view, so i suggest viewing it on 
+                    pc / laptop !<br> currently working on it in mobile view ＞︿＜</small>
+                </a>
+                <a href="https://raiworm.carrd.co" target="_blank" rel="noopener">
+                    <span class="link-title">꒰ྀི১ carrd ໒꒱ིྀ</span>
+                    <small>my art portfolio . . . not updated but whatevers</small>
+                </a>
+                <a href="https://raiworm.straw.page" target="_blank" rel="noopener">
+                    <span class="link-title">strawpage ♫</span>
+                    <small>my first evr website ! i dont update this thing anymore lols</small>
+                </a>
+            </div>
+
+            <button class="category-button bg-btn-2" onclick="toggleCategory('socials', this)"
+            style="background-image: url('bgg.jpe');">
+                <img src="starstripe.webp"> my socials ♡ <img src="spiral.webp">
+            </button>
+
+            <div class="sub-links" id="socials">
+
+                <div class="multi-account">
+                    <button class="platform-button" onclick="toggleAccounts(this)">
+                        ˖ ݁♬⋆ facebook .˚𝄞
+                    </button>
+
+                    <div class="account-links">
+                        <a href="https://www.facebook.com/junkyqr" target="_blank" rel="noopener">
+                            ras berry
+                            <small>my art acc</small>
+                        </a>
+                        <a href="https://www.facebook.com/raikyeoptapogimnida" target="_blank" rel="noopener">
+                            razhel arceno
+                            <small>personal / school</small>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="multi-account">
+                    <button class="platform-button" onclick="toggleAccounts(this)">
+                        instagram <img src="skull.webp">
+                    </button>
+
+                    <div class="account-links">
+                        <a href="https://www.instagram.com/raikoholic/" target="_blank" rel="noopener">
+                            raikoholic
+                            <small>main ! ! !</small>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/angelleparfait/" target="_blank" rel="noopener">
+                            angelleparfait
+                        </a>
+                    </div>
+                </div>
+
+                <a href="https://ph.pinterest.com/insomniauchan/" target="_blank" rel="noopener">
+                    <span class="link-title"><img src="wing1.webp">pinterest<img src="wing2.webp"></span>
+                </a>
+
+                <div class="multi-account">
+                    <button class="platform-button" onclick="toggleAccounts(this)">
+                    . ❥ ּ֯ ┆꒰ twitterּ֯ .ᐟ ꒱
+                    </button>
+
+                    <div class="account-links">
+                        <a href="https://x.com/9ykio_0v" target="_blank" rel="noopener">
+                            @9ykio_0v
+                            <small>art twitter</small>
+                        </a>
+                        <a href="https://x.com/raeulite" target="_blank" rel="noopener">
+                            @raeulite
+                            <small>dump >:3c</small>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="https://youtube.com/@raeulite" target="_blank" rel="noopener">
+                    <span class="link-title"><img src="hearts.webp"> youtube <img src="arrow.webp"></span>
+                </a>
+
+                <div class="discord-box">
+                    <div class="discord-title"><img src="melloleft.webp"> discord <img src="pianoright.webp"></div>
+                    <div class="discord-item">
+                        <span>˚₊‧꒰`comms account ໒꒱ ‧₊˚</span>
+                        <small>@nyankomailtrollw</small>
+                    </div>
+                    <div class="discord-divider"></div>
+                    <div class="discord-item">
+                        <span>friends only ૮꒰◞ ˕ ◟ ྀི꒱ა</span>
+                        <small>@raeulite</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <button class="category-button" onclick="toggleCategory('misc', this)"
+            style="background-image: url('blue.jpe');">
+                <img src="bow.webp"> misc. ♡ <img src="hibear.webp">
+            </button>
+
+            <div class="sub-links" id="misc">
+                <a href="https://tellonym.me/raiomi" target="_blank" rel="noopener">
+                    <span>⋮ ⌗ ┆ tellonym ₊˚⊹ ᰔ</span>
+                    <small>send me anonymous messages ! ! ! i always reply ;pp</small>
+                </a>
+                
+                <a href="https://www.roblox.com/users/3317457758/profile" target="_blank" rel="noopener">
+                    <span><img src="heartu.webp"> roblox <img src="bear.webp"></span>
+                    <small>let;s play ο(=•ω＜=)ρ⌒☆ !</small>
+                </a>
+                
+                <div class="playlist-account">
+                    <button class="platform-button" onclick="toggleAccounts(this)">
+                         (₌ ᵕ̣̣̣̣̣ ᆽ ᵕ̣̣̣̣̣₌) ♫
+                    </button>
+
+                    <div class="playlist-links-grid">
+                    <a href="https://youtube.com/playlist?list=PLR8twyLX-xCk&si=V6fY3N0XOXP5HRD3" target="_blank" rel="noopener">
+                            <span><img src="notebook.webp"><img src="pen.webp"></span>
+                        </a>
+                    
+                    <a href="https://youtube.com/playlist?list=PLHO0WWD8-yGg&si=OPhpSOmq1mjJ_pog" target="_blank" rel="noopener">
+                           <span><img src="mp3player.webp"><img src="music.webp"></span>
+                        </a>
+                    
+                    <a href="https://youtube.com/playlist?list=PLPLx6K6xwGZUURds4sk4HB9VhP6bz8lDG&si=kQ-dVJZQmL_S5prH" target="_blank" rel="noopener">
+                            postal 2 playlist
+                        </a>
+                        
+                    <a href="https://youtube.com/playlist?list=PLPLx6K6xwGZUTY7A98k7wuEOuM_sNc4cA&si=CisrmW68X570Spw5" target="_blank" rel="noopener">
+                            alice madness playlist
+                        </a>
+                        
+                    <a href="https://youtube.com/playlist?list=PLQzV0GcGUsY0&si=dS1jFtS0rHc0_ChG" target="_blank" rel="noopener" class="full-width">
+                            <img src="cats.webp">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="category-button" onclick="toggleCategory('pasikat', this)"
+            style="background-image: url('bg.jpe');">
+                ଘ(੭ ᐛ )━☆ﾟ.*･｡ﾟ
+            </button>
+
+            <div class="sub-links" id="pasikat">
+                <a href="https://letterboxd.com/angelleparfait/" target="_blank" rel="noopener">
+                    <span>letterboxd <img src="cat.webp"></span>
+                    <small>i lik movies</small>
+                </a>
+                <a href="http://myanimelist.net/profile/raikou" target="_blank" rel="noopener">
+                    <span><img src="melloears.webp"> myanimelist <img src="asdf.webp"></span>
+                    <small>i dont use this but i just wnat everyone 2 see what animes i like :hehe:</small>
+                </a>
+                <a href="https://open.spotify.com/user/31zzu7fpy2v3jfpymnnof24kimtq" target="_blank" rel="noopener">
+                    𝄞⋆ ݁♪ . spotify ♬⋆.˚
+                    <small>I LOVE MUSIC <img src="BUNNY.webp"><img src="music.webp"> </small>
+                </a>
+            </div>
+
+        </section>
+        
+        <br><img src="star.webp"><img src="star.webp">
+        
+        <section class="bottom">
+        </section>
+
+        <footer>
+          <img src="arigatou.png"> 
+        </footer>
+
+    </main>
+
+    <script>
+        function closeCategory(menu, btnElement) {
+            if (!menu.classList.contains("open")) return;
+            
+            menu.classList.remove("open");
+            menu.classList.add("closing");
+            if (btnElement) btnElement.classList.remove("active-btn");
+
+            // Reset any inner open sub-accounts or playlists inside this category
+            const innerActiveBoxes = menu.querySelectorAll('.multi-account.active, .playlist-account.active');
+            innerActiveBoxes.forEach(box => {
+                box.classList.remove('active');
+            });
+
+            menu.addEventListener('animationend', function handler() {
+                menu.classList.remove("closing");
+                menu.removeEventListener('animationend', handler);
+            });
+        }
+
+        function toggleCategory(category, btnElement) {
+            const targetMenu = document.getElementById(category);
+            const isTargetOpen = targetMenu.classList.contains("open");
+
+            // Close all other open categories first
+            const allSubLinks = document.querySelectorAll('.sub-links');
+            const allCategoryBtns = document.querySelectorAll('.category-button');
+
+            allSubLinks.forEach((menu, index) => {
+                if (menu.id !== category && menu.classList.contains("open")) {
+                    closeCategory(menu, allCategoryBtns[index]);
+                }
+            });
+
+            // Toggle target category
+            if (isTargetOpen) {
+                closeCategory(targetMenu, btnElement);
+            } else {
+                if (targetMenu.classList.contains("closing")) {
+                    targetMenu.classList.remove("closing");
+                }
+                targetMenu.classList.add("open");
+                btnElement.classList.add("active-btn");
+            }
+        }
+
+        function toggleAccounts(button) {
+            const accountBox = button.parentElement;
+            
+            if (accountBox.classList.contains("active")) {
+                accountBox.classList.remove("active");
+                accountBox.classList.add("closing");
+                
+                accountBox.addEventListener('animationend', function handler() {
+                    accountBox.classList.remove("closing");
+                    accountBox.removeEventListener('animationend', handler);
+                });
+            } else {
+                if (accountBox.classList.contains("closing")) {
+                    accountBox.classList.remove("closing");
+                }
+                accountBox.classList.add("active");
+            }
+        }
+    </script>
+
+</body>
+</html>
